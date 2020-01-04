@@ -223,7 +223,7 @@
       Overridable test home. So that you can call individual pom files directly without
       things breaking.
     -->
-    <spark.test.home>${session.executionRootDirectory}</spark.test.home>
+<!--    <spark.test.home>${session.executionRootDirectory}</spark.test.home>-->
 
     <CodeCacheSize>512m</CodeCacheSize>
   </properties>
@@ -2124,7 +2124,7 @@
                 Setting SPARK_DIST_CLASSPATH is a simple way to make sure any child processes
                 launched by the tests have access to the correct test-time classpath.
               -->
-              <SPARK_DIST_CLASSPATH>${test_classpath}</SPARK_DIST_CLASSPATH>
+<!--              <SPARK_DIST_CLASSPATH>${test_classpath}</SPARK_DIST_CLASSPATH>-->
               <SPARK_PREPEND_CLASSES>1</SPARK_PREPEND_CLASSES>
               <SPARK_SCALA_VERSION>${scala.binary.version}</SPARK_SCALA_VERSION>
               <SPARK_TESTING>1</SPARK_TESTING>
@@ -2135,7 +2135,7 @@
               <derby.system.durability>test</derby.system.durability>
               <java.awt.headless>true</java.awt.headless>
               <java.io.tmpdir>${project.build.directory}/tmp</java.io.tmpdir>
-              <spark.test.home>${spark.test.home}</spark.test.home>
+<!--              <spark.test.home>${spark.test.home}</spark.test.home>-->
               <spark.testing>1</spark.testing>
               <spark.master.rest.enabled>false</spark.master.rest.enabled>
               <spark.ui.enabled>false</spark.ui.enabled>
@@ -2174,7 +2174,7 @@
                 Setting SPARK_DIST_CLASSPATH is a simple way to make sure any child processes
                 launched by the tests have access to the correct test-time classpath.
               -->
-              <SPARK_DIST_CLASSPATH>${test_classpath}</SPARK_DIST_CLASSPATH>
+<!--              <SPARK_DIST_CLASSPATH>${test_classpath}</SPARK_DIST_CLASSPATH>-->
               <SPARK_PREPEND_CLASSES>1</SPARK_PREPEND_CLASSES>
               <SPARK_SCALA_VERSION>${scala.binary.version}</SPARK_SCALA_VERSION>
               <SPARK_TESTING>1</SPARK_TESTING>
@@ -2185,7 +2185,7 @@
               <derby.system.durability>test</derby.system.durability>
               <java.awt.headless>true</java.awt.headless>
               <java.io.tmpdir>${project.build.directory}/tmp</java.io.tmpdir>
-              <spark.test.home>${spark.test.home}</spark.test.home>
+<!--              <spark.test.home>${spark.test.home}</spark.test.home>-->
               <spark.testing>1</spark.testing>
               <spark.ui.enabled>false</spark.ui.enabled>
               <spark.ui.showConsoleProgress>false</spark.ui.showConsoleProgress>
@@ -2533,7 +2533,7 @@
           <dependency>
             <groupId>com.puppycrawl.tools</groupId>
             <artifactId>checkstyle</artifactId>
-            <version>8.2</version>
+            <version>8.14</version>
           </dependency>
         </dependencies>
         <executions>
