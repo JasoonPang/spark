@@ -28,7 +28,7 @@ import org.apache.spark.sql.SparkSession;
 public class JavaLogisticRegressionWithElasticNetExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaLogisticRegressionWithElasticNetExample")
       .getOrCreate();
 

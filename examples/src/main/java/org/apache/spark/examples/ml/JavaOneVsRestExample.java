@@ -39,7 +39,7 @@ import org.apache.spark.sql.SparkSession;
 public class JavaOneVsRestExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaOneVsRestExample")
       .getOrCreate();
 

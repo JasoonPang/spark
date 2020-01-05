@@ -33,7 +33,7 @@ import org.apache.spark.sql.SparkSession;
 public class JavaDecisionTreeRegressionExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaDecisionTreeRegressionExample")
       .getOrCreate();
     // $example on$

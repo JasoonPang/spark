@@ -43,7 +43,7 @@ import org.apache.spark.sql.types.StructType;
 public class JavaBucketizerExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaBucketizerExample")
       .getOrCreate();
 

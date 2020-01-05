@@ -29,7 +29,7 @@ import org.apache.spark.sql.SparkSession
 object GradientBoostedTreeRegressorExample {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName("GradientBoostedTreeRegressorExample")
       .getOrCreate()
 

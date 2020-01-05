@@ -68,7 +68,7 @@ public final class JavaStructuredNetworkWordCountWindowed {
     String slideDuration = slideSize + " seconds";
 
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaStructuredNetworkWordCountWindowed")
       .getOrCreate();
 

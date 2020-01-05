@@ -36,7 +36,7 @@ import static org.apache.spark.sql.types.DataTypes.*;
 public class JavaStringIndexerExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaStringIndexerExample")
       .getOrCreate();
 

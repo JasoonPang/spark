@@ -142,7 +142,7 @@ object RandomForestExample {
 
   def run(params: Params): Unit = {
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName(s"RandomForestExample with $params")
       .getOrCreate()
 

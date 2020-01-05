@@ -34,7 +34,7 @@ import org.apache.spark.sql.types.*;
 public class JavaWord2VecExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaWord2VecExample")
       .getOrCreate();
 

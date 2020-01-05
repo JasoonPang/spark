@@ -38,7 +38,7 @@ import org.apache.spark.sql.types.StructType;
 public class JavaPCAExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaPCAExample")
       .getOrCreate();
 

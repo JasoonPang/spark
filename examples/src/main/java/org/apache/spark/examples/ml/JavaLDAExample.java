@@ -36,7 +36,7 @@ public class JavaLDAExample {
   public static void main(String[] args) {
     // Creates a SparkSession
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaLDAExample")
       .getOrCreate();
 

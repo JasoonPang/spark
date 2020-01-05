@@ -56,7 +56,7 @@ object SparkPageRank {
     showWarning()
 
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName("SparkPageRank")
       .getOrCreate()
 

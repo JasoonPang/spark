@@ -39,7 +39,7 @@ public class JavaGaussianMixtureExample {
 
     // Creates a SparkSession
     SparkSession spark = SparkSession
-            .builder()
+            .builder().master("local[*]")
             .appName("JavaGaussianMixtureExample")
             .getOrCreate();
 

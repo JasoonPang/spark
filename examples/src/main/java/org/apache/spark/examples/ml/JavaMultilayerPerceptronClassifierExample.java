@@ -33,7 +33,7 @@ public class JavaMultilayerPerceptronClassifierExample {
 
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaMultilayerPerceptronClassifierExample")
       .getOrCreate();
 

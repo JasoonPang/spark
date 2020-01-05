@@ -35,7 +35,7 @@ import org.apache.spark.sql.types.StructType;
 public class JavaQuantileDiscretizerExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaQuantileDiscretizerExample")
       .getOrCreate();
 

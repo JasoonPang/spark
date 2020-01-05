@@ -53,7 +53,7 @@ public final class JavaStructuredSessionization {
     int port = Integer.parseInt(args[1]);
 
     SparkSession spark = SparkSession
-        .builder()
+        .builder().master("local[*]")
         .appName("JavaStructuredSessionization")
         .getOrCreate();
 

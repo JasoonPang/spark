@@ -36,7 +36,7 @@ object BisectingKMeansExample {
   def main(args: Array[String]): Unit = {
     // Creates a SparkSession
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName("BisectingKMeansExample")
       .getOrCreate()
 

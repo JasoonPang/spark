@@ -26,7 +26,7 @@ import org.apache.spark.sql.SparkSession
 object NGramExample {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName("NGramExample")
       .getOrCreate()
 

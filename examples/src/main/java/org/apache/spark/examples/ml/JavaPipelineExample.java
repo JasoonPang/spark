@@ -37,7 +37,7 @@ import org.apache.spark.sql.SparkSession;
 public class JavaPipelineExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaPipelineExample")
       .getOrCreate();
 

@@ -34,7 +34,7 @@ object PageRankExample {
   def main(args: Array[String]): Unit = {
     // Creates a SparkSession.
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName(s"${this.getClass.getSimpleName}")
       .getOrCreate()
     val sc = spark.sparkContext

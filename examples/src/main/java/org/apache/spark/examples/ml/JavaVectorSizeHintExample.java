@@ -37,7 +37,7 @@ import static org.apache.spark.sql.types.DataTypes.*;
 public class JavaVectorSizeHintExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaVectorSizeHintExample")
       .getOrCreate();
 

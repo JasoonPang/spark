@@ -64,7 +64,7 @@ object UserDefinedUntypedAggregation {
 
   def main(args: Array[String]): Unit = {
     val spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("Spark SQL user-defined DataFrames aggregation example")
       .getOrCreate()
 

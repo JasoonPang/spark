@@ -27,7 +27,7 @@ object TfIdfExample {
 
   def main(args: Array[String]) {
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName("TfIdfExample")
       .getOrCreate()
 

@@ -166,7 +166,7 @@ object DecisionTreeExample {
       algo: String,
       fracTest: Double): (DataFrame, DataFrame) = {
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .getOrCreate()
 
     // Load training data
@@ -199,7 +199,7 @@ object DecisionTreeExample {
 
   def run(params: Params): Unit = {
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName(s"DecisionTreeExample with $params")
       .getOrCreate()
 

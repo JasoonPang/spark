@@ -62,7 +62,7 @@ object DataFrameExample {
 
   def run(params: Params): Unit = {
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName(s"DataFrameExample with $params")
       .getOrCreate()
 

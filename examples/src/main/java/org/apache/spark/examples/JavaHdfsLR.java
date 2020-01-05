@@ -122,7 +122,7 @@ public final class JavaHdfsLR {
     showWarning();
 
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaHdfsLR")
       .getOrCreate();
 

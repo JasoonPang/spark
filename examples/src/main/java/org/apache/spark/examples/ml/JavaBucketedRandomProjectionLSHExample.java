@@ -47,7 +47,7 @@ import static org.apache.spark.sql.functions.col;
 public class JavaBucketedRandomProjectionLSHExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaBucketedRandomProjectionLSHExample")
       .getOrCreate();
 

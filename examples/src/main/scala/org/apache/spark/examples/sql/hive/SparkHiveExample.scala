@@ -42,7 +42,7 @@ object SparkHiveExample {
     val warehouseLocation = new File("spark-warehouse").getAbsolutePath
 
     val spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("Spark Hive Example")
       .config("spark.sql.warehouse.dir", warehouseLocation)
       .enableHiveSupport()

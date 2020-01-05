@@ -30,7 +30,7 @@ object HdfsTest {
       System.exit(1)
     }
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName("HdfsTest")
       .getOrCreate()
     val file = spark.read.text(args(0)).rdd

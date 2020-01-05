@@ -29,7 +29,7 @@ import org.apache.spark.sql.Row;
 public class JavaStandardScalerExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaStandardScalerExample")
       .getOrCreate();
 

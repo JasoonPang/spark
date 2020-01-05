@@ -33,7 +33,7 @@ public class JavaNaiveBayesExample {
 
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaNaiveBayesExample")
       .getOrCreate();
 

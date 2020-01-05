@@ -39,7 +39,7 @@ import org.apache.spark.sql.types.StructType;
 public class JavaMinMaxScalerExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaMinMaxScalerExample")
       .getOrCreate();
 

@@ -34,7 +34,7 @@ object LDAExample {
   def main(args: Array[String]): Unit = {
     // Creates a SparkSession
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName(s"${this.getClass.getSimpleName}")
       .getOrCreate()
 

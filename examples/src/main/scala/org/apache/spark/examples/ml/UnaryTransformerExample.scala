@@ -84,7 +84,7 @@ object UnaryTransformerExample {
 
   def main(args: Array[String]) {
     val spark = SparkSession
-      .builder()
+      .builder.master("local[*]")
       .appName("UnaryTransformerExample")
       .getOrCreate()
 

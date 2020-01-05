@@ -40,7 +40,7 @@ import org.apache.spark.sql.SparkSession;
 public class JavaModelSelectionViaTrainValidationSplitExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaModelSelectionViaTrainValidationSplitExample")
       .getOrCreate();
 

@@ -40,7 +40,7 @@ import static org.apache.spark.sql.types.DataTypes.*;
 public class JavaImputerExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaImputerExample")
       .getOrCreate();
 

@@ -99,7 +99,7 @@ class JavaSparkSessionSingleton {
   public static SparkSession getInstance(SparkConf sparkConf) {
     if (instance == null) {
       instance = SparkSession
-        .builder()
+        .builder().master("local[*]")
         .config(sparkConf)
         .getOrCreate();
     }

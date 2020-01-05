@@ -26,7 +26,7 @@ import org.apache.spark.sql.SparkSession
 object CountVectorizerExample {
   def main(args: Array[String]) {
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName("CountVectorizerExample")
       .getOrCreate()
 

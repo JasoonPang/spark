@@ -59,7 +59,7 @@ public class JavaSparkHiveExample {
     // warehouseLocation points to the default location for managed databases and tables
     String warehouseLocation = new File("spark-warehouse").getAbsolutePath();
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("Java Spark Hive Example")
       .config("spark.sql.warehouse.dir", warehouseLocation)
       .enableHiveSupport()

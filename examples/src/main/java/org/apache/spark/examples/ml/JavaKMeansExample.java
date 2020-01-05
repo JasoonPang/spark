@@ -40,7 +40,7 @@ public class JavaKMeansExample {
   public static void main(String[] args) {
     // Create a SparkSession.
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaKMeansExample")
       .getOrCreate();
 

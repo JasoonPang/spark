@@ -47,7 +47,7 @@ public final class JavaStructuredNetworkWordCount {
     int port = Integer.parseInt(args[1]);
 
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaStructuredNetworkWordCount")
       .getOrCreate();
 

@@ -65,14 +65,14 @@ public final class JavaTC {
 
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaTC")
       .getOrCreate();
 
     JavaSparkContext jsc = new JavaSparkContext(spark.sparkContext());
 
     Integer slices = (args.length > 0) ? Integer.parseInt(args[0]): 2;
-    JavaPairRDD<Integer, Integer> tc = jsc.parallelizePairs(generateGraph(), slices).cache();
+    JavaPairRDD<Integer, Integer> tc = (JavaPairRDD<Integer, Integer>) jsc.parallelizePairs(generateGraph(), slices).cache();
 
     // Linear transitive closure: each round grows paths by one edge,
     // by joining the graph's edges with the already-discovered paths.

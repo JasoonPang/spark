@@ -31,7 +31,7 @@ import org.apache.spark.sql.Row;
 public class JavaVectorIndexerExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaVectorIndexerExample")
       .getOrCreate();
 

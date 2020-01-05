@@ -37,7 +37,7 @@ import org.apache.spark.sql.types.*;
 public class JavaVectorSlicerExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaVectorSlicerExample")
       .getOrCreate();
 

@@ -26,7 +26,7 @@ import org.apache.spark.sql.SparkSession
 object SQLTransformerExample {
   def main(args: Array[String]) {
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName("SQLTransformerExample")
       .getOrCreate()
 

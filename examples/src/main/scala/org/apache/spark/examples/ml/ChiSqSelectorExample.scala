@@ -27,7 +27,7 @@ import org.apache.spark.sql.SparkSession
 object ChiSqSelectorExample {
   def main(args: Array[String]) {
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName("ChiSqSelectorExample")
       .getOrCreate()
     import spark.implicits._

@@ -88,7 +88,7 @@ public class JavaSparkSQLExample {
   public static void main(String[] args) throws AnalysisException {
     // $example on:init_session$
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("Java Spark SQL basic example")
       .config("spark.some.config.option", "some-value")
       .getOrCreate();

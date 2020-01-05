@@ -110,7 +110,7 @@ object LogisticRegressionExample {
 
   def run(params: Params): Unit = {
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName(s"LogisticRegressionExample with $params")
       .getOrCreate()
 

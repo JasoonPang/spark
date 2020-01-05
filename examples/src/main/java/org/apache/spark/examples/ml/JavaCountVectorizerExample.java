@@ -33,7 +33,7 @@ import org.apache.spark.sql.types.*;
 public class JavaCountVectorizerExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaCountVectorizerExample")
       .getOrCreate();
 

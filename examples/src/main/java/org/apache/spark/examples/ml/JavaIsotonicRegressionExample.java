@@ -37,7 +37,7 @@ public class JavaIsotonicRegressionExample {
   public static void main(String[] args) {
     // Create a SparkSession.
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaIsotonicRegressionExample")
       .getOrCreate();
 

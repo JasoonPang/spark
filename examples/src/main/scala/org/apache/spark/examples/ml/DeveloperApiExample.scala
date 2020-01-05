@@ -38,7 +38,7 @@ object DeveloperApiExample {
 
   def main(args: Array[String]) {
     val spark = SparkSession
-      .builder
+      .builder.master("local[*]")
       .appName("DeveloperApiExample")
       .getOrCreate()
     import spark.implicits._

@@ -34,7 +34,7 @@ import java.util.List;
 public class JavaInteractionExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaInteractionExample")
       .getOrCreate();
 

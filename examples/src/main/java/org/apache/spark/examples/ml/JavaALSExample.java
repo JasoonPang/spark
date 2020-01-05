@@ -80,7 +80,7 @@ public class JavaALSExample {
 
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaALSExample")
       .getOrCreate();
 

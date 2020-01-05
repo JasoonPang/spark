@@ -32,7 +32,7 @@ import org.apache.spark.sql.SparkSession;
 public class JavaDecisionTreeClassificationExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaDecisionTreeClassificationExample")
       .getOrCreate();
 

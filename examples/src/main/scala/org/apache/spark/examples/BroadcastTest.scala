@@ -29,7 +29,7 @@ object BroadcastTest {
     val blockSize = if (args.length > 2) args(2) else "4096"
 
     val spark = SparkSession
-      .builder()
+      .builder.master("local[*]")
       .appName("Broadcast Test")
       .config("spark.broadcast.blockSize", blockSize)
       .getOrCreate()

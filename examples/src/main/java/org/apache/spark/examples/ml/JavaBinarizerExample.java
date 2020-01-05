@@ -36,7 +36,7 @@ import org.apache.spark.sql.types.StructType;
 public class JavaBinarizerExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaBinarizerExample")
       .getOrCreate();
 

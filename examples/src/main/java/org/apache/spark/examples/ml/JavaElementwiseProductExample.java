@@ -39,7 +39,7 @@ import org.apache.spark.sql.types.StructType;
 public class JavaElementwiseProductExample {
   public static void main(String[] args) {
     SparkSession spark = SparkSession
-      .builder()
+      .builder().master("local[*]")
       .appName("JavaElementwiseProductExample")
       .getOrCreate();
 
