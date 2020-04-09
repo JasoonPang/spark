@@ -31,6 +31,7 @@ object BinaryClassificationMetricsExample {
   def main(args: Array[String]): Unit = {
 
     val conf = new SparkConf().setAppName("BinaryClassificationMetricsExample")
+      .setMaster("local[*]")
     val sc = new SparkContext(conf)
     // $example on$
     // Load training data in LIBSVM format

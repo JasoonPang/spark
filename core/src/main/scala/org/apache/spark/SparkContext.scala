@@ -358,7 +358,7 @@ class SparkContext(config: SparkConf) extends Logging {
         s" ${SparkContext.VALID_LOG_LEVELS.mkString(",")}")
     Utils.setLogLevel(org.apache.log4j.Level.toLevel(upperCased))
   }
-
+  // 主要执行方法
   try {
     _conf = config.clone()
     _conf.validateSettings()
@@ -419,7 +419,7 @@ class SparkContext(config: SparkConf) extends Logging {
     _statusStore = AppStatusStore.createLiveStore(conf)
     listenerBus.addToStatusQueue(_statusStore.listener.get)
 
-    // Create the Spark execution environment (cache, map output tracker, etc)
+    // Create the Spark execution environment (cache, map output tracker, etc) 创建运行环境
     _env = createSparkEnv(_conf, isLocal, listenerBus)
     SparkEnv.set(_env)
 
@@ -488,7 +488,7 @@ class SparkContext(config: SparkConf) extends Logging {
     _heartbeatReceiver = env.rpcEnv.setupEndpoint(
       HeartbeatReceiver.ENDPOINT_NAME, new HeartbeatReceiver(this))
 
-    // Create and start the scheduler
+    // Create and start the scheduler  创建并启动任务调度器
     val (sched, ts) = SparkContext.createTaskScheduler(this, master, deployMode)
     _schedulerBackend = sched
     _taskScheduler = ts

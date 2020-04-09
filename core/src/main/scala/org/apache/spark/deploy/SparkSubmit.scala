@@ -125,8 +125,10 @@ object SparkSubmit extends CommandLineUtils with Logging {
   override def main(args: Array[String]): Unit = {
     // Initialize logging if it hasn't been done yet. Keep track of whether logging needs to
     // be reset before the application starts.
+    // 初始化日记类
     val uninitLog = initializeLogIfNecessary(true, silent = true)
 
+    // 获取提交的java参数列表并校验解析
     val appArgs = new SparkSubmitArguments(args)
     if (appArgs.verbose) {
       // scalastyle:off println

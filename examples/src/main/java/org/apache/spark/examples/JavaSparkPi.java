@@ -45,7 +45,7 @@ public final class JavaSparkPi {
       l.add(i);
     }
 
-    JavaRDD<Integer> dataSet = jsc.parallelize(l, slices);
+    JavaRDD<Integer> dataSet = jsc.<Integer>parallelize(l, slices);
 
     int count = dataSet.map(integer -> {
       double x = Math.random() * 2 - 1;
